@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meerab Khan </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark">
+    <nav>
+        <div class="nav-container">
+            <div class="logo-section">
+                <div>
+                    <div class="logo">Portfolio</div>
+                    <div class="logo-subtitle">Meerab Khan</div>
+                </div>
+            </div>
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
+            <ul class="nav-links" id="navLinks">
+                <li><button onclick="navigateTo('home')" class="nav-btn active" data-section="home">Home</button></li>
+                <li><button onclick="navigateTo('about')" class="nav-btn" data-section="about">About</button></li>
+                <li><button onclick="navigateTo('skills')" class="nav-btn" data-section="skills">Skills</button></li>
+                <li><button onclick="navigateTo('projects')" class="nav-btn" data-section="projects">Projects</button></li>
+                <li><button onclick="navigateTo('contact')" class="nav-btn" data-section="contact">Contact</button></li>
+            </ul>
+            <button class="theme-toggle" onclick="toggleTheme()">
+                <span id="themeIcon">🌙</span> Theme
+            </button>
+        </div>
+    </nav>
+
+    <section id="home" class="section active">
+        <div class="particles" id="particles"></div>
+        <div class="hero-content">
+            <div class="hero-subtitle">Welcome to my portfolio</div>
+            <h1>Meerab Khan</h1>
+            <div id="typed-text"></div>
+            <div class="cta-buttons">
+                <button class="cta-btn" onclick="navigateTo('projects')">View Projects</button>
+                <button class="cta-btn secondary" onclick="navigateTo('contact')">Hire Me</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="section">
+        <h2>About Me</h2>
+        <p class="section-subtitle">Developer • Problem Solver<br>
+            Aspiring data scientist 
+        </p>
+        <div class="about-container">
+            <div class="about-grid">
+                <div class="about-card">
+                    <h3>💻 Developer Journey</h3>
+<p>
+Passionate full-stack development enthusiast with practical experience
+gained through a 1.5-year MERN Stack course and a 3-month internship.
+I enjoy building web applications and solving real-world problems using
+modern web technologies such as MongoDB, Express.js, React, Node.js, and Python.
+I am continuously learning and expanding my skills to create functional
+and user-friendly applications.
+</p>
+                </div>
+                <div class="about-card">
+                    <h3>🎯 New Journey</h3>
+                <p>I am an AI and Data Science enthusiast with a strong interest in data analysis
+and machine learning. I work with Python to explore, analyze, and understand
+data, and I am continuously improving my skills through learning and hands-on
+projects. I aim to apply data-driven approaches to solve real-world problems.
+</p>
+                </div>
+            </div>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">25+</div>
+                    <div class="stat-label">Projects Completed</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">10+</div>
+                    <div class="stat-label">Happy Clients</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">1</div>
+                    <div class="stat-label">Years Experience</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Client Satisfaction</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="section">
+        <h2>Skills & Expertise</h2>
+        <p class="section-subtitle">Technical & Soft Skills</p>
+        <div class="skills-container">
+            <div class="skill-card">
+                <div class="skill-header">
+                    <span class="skill-name">JavaScript / React</span>
+                    <span class="skill-level">Expert</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" data-width="95"></div>
+                </div>
+            </div>
+            <div class="skill-card">
+                <div class="skill-header">
+                    <span class="skill-name">Python</span>
+                    <span class="skill-level">Advanced</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" data-width="90"></div>
+                </div>
+            </div>
+            <div class="skill-card">
+                <div class="skill-header">
+                    <span class="skill-name">HTML/CSS</span>
+                    <span class="skill-level">Expert</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" data-width="95"></div>
+                </div>
+            </div>
+            <div class="skill-card">
+                <div class="skill-header">
+                    <span class="skill-name">C and C++</span>
+                    <span class="skill-level">Advanced</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" data-width="85"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="section">
+        <h2>Featured Projects</h2>
+        <p class="section-subtitle">Development Portfolio</p>
+        <div class="projects-grid">
+            <div class="project-card" data-project="0">
+                <div class="project-icon">
+                    <img src="assets/bookshop.PNG" alt="Project" style="display: block;">
+                    <div class="upload-overlay" onclick="document.getElementById('projectImg0').click()" style="display: none;">
+                        <div class="upload-icon">📸</div>
+                        <div>Click to change<br>project image</div>
+                    </div>
+                    <input type="file" id="projectImg0" accept="image/*" onchange="loadProjectImage(0, this)">
+                    <div class="project-placeholder" style="display: none;">🚀</div>
+                </div>
+                <div class="project-body">
+                    <h3 class="project-title">Book Shop</h3>
+                    <p class="project-tech">React,Talwind</p>
+                    <button class="project-btn" onclick="openProjectModal(0)">View Project</button>
+                </div>
+            </div>
+            <div class="project-card" data-project="1">
+                <div class="project-icon">
+                    <img src="assets/finance.PNG" alt="Project" style="display: block;">
+                    <div class="upload-overlay" onclick="document.getElementById('projectImg1').click()" style="display: none;">
+                        <div class="upload-icon">📸</div>
+                        <div>Click to change<br>project image</div>
+                    </div>
+                    <input type="file" id="projectImg1" accept="image/*" onchange="loadProjectImage(1, this)">
+                    <div class="project-placeholder" style="display: none;">📱</div>
+                </div>
+                <div class="project-body">
+                    <h3 class="project-title">Finance Tracker</h3>
+                    <p class="project-tech">Html css and js</p>
+                    <button class="project-btn" onclick="openProjectModal(1)">View Project</button>
+                </div>
+            </div>
+            <div class="project-card" data-project="2">
+                <div class="project-icon">
+                    <img src="assets/creative.PNG" alt="Project" style="display: block;">
+                    <div class="upload-overlay" onclick="document.getElementById('projectImg2').click()" style="display: none;">
+                        <div class="upload-icon">📸</div>
+                        <div>Click to change<br>project image</div>
+                    </div>
+                    <input type="file" id="projectImg2" accept="image/*" onchange="loadProjectImage(2, this)">
+                    <div class="project-placeholder" style="display: none;">🎨</div>
+                </div>
+                <div class="project-body">
+                    <h3 class="project-title">Creative Portfolio</h3>
+                    <p class="project-tech">Html css and js</p>
+                    <button class="project-btn" onclick="openProjectModal(2)">View Project</button>
+                </div>
+            </div>
+            <div class="project-card" data-project="3">
+                <div class="project-icon">
+                    <img src="assets/airpord.PNG" alt="Project" style="display: block;">
+                    <div class="upload-overlay" onclick="document.getElementById('projectImg3').click()" style="display: none;">
+                        <div class="upload-icon">📸</div>
+                        <div>Click to change<br>project image</div>
+                    </div>
+                    <input type="file" id="projectImg3" accept="image/*" onchange="loadProjectImage(3, this)">
+                    <div class="project-placeholder" style="display: none;">🤖</div>
+                </div>
+                <div class="project-body">
+                    <h3 class="project-title">E-commerce Showcase</h3>
+                    <p class="project-tech">html css and js</p>
+                    <button class="project-btn" onclick="openProjectModal(3)">View Project</button>
+                </div>
+            </div>
+            <div class="project-card" data-project="4">
+                <div class="project-icon">
+                    <img src="assets/todo app.PNG" alt="Project" style="display: block;">
+                    <div class="upload-overlay" onclick="document.getElementById('projectImg4').click()" style="display: none;">
+                        <div class="upload-icon">📸</div>
+                        <div>Click to change<br>project image</div>
+                    </div>
+                    <input type="file" id="projectImg4" accept="image/*" onchange="loadProjectImage(4, this)">
+                    <div class="project-placeholder" style="display: none;">📊</div>
+                </div>
+                <div class="project-body">
+                    <h3 class="project-title">Todo App</h3>
+                    <p class="project-tech">Reactjs, Tailwind</p>
+                    <button class="project-btn" onclick="openProjectModal(4)">View Project</button>
+                </div>
+            </div>
+            <div class="project-card" data-project="5">
+                <div class="project-icon">
+                    <img src="assets/mindmate.PNG" alt="Project" style="display: block;">
+                    <div class="upload-overlay" onclick="document.getElementById('projectImg5').click()" style="display: none;">
+                        <div class="upload-icon">📸</div>
+                        <div>Click to change<br>project image</div>
+                    </div>
+                    <input type="file" id="projectImg5" accept="image/*" onchange="loadProjectImage(5, this)">
+                    <div class="project-placeholder" style="display: none;">🎮</div>
+                </div>
+                <div class="project-body">
+                    <h3 class="project-title">MindeMate</h3>
+                    <p class="project-tech">html css and js</p>
+                    <button class="project-btn" onclick="openProjectModal(5)">View Project</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <h2>Get In Touch</h2>
+        <p class="section-subtitle">Let's Work Together</p>
+        <div class="contact-container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">📧</div>
+                        <div>
+                            <h4>Email</h4>
+                            <p>meerabirsahd10@example.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">📱</div>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>+92 3426369212</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">📍</div>
+                        <div>
+                            <h4>Location</h4>
+                            <p>Karachi Surjani Town</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">💼</div>
+                        <div>
+                            <h4>Available for</h4>
+                            <p>Full-time, Part-time, </p>
+                        </div>
+                    </div>
+                </div>
+                <form  action="action="https://api.web3forms.com/submit"" class="contact-form" onsubmit="handleSubmit(event)" method="post">
+                     <input type="hidden" name="access_key" value="9721f50f-56c9-419f-a15b-86229bcda31a">
+                    <div class="form-group">
+                        <label>Name</label>
+                        <input type="text" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" placeholder="your.email@example.com" required>
+                    </div>
+                   
+                    <div class="form-group">
+                        <label>Message</label>
+                        <textarea rows="5" placeholder="Tell me about your project..." required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    
+    <script src="script.js"></script>
+</body>
+</html>
